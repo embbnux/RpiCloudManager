@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
 {% block body %}
  <p>hello</p>
+  <form action="/gpio/11" method=post>
+    <input type=submit value="led on" />
+  </form>
+  <form action="/gpio/111" method=post>
+    <input type=submit value="led off"/>
+  </form>
 {% endblock %}
