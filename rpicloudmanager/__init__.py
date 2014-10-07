@@ -18,19 +18,19 @@ def init_db():
   with closing(connect_db()) as db:
     with app.open_resource('schema.sql',mode='r') as f:
       ad.cursor().executescript(f.read())
-	db.commit()
+    db.commit()
 
-@app.before_request
-def before_request():
-  g.db = connect_db()
-@app.teardown_request
-  def teardown_request(exception):
-  db = getattr(g, 'db', None)
-  if db is not None:
-    db.close()
-    g.db.close()
+#@app.before_request
+#def before_request():
+#  g.db = connect_db()
+#@app.teardown_request
+#  def teardown_request(exception):
+#  db = getattr(g, 'db', None)
+#  if db is not None:
+#    db.close()
+#    g.db.close()
 
 import  rpicloudmanager.views
 
-if __name__=='__main__'
+if __name__=='__main__':
   app.run()
