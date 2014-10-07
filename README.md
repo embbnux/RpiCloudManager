@@ -1,6 +1,7 @@
-#author: Embbnux Ji
-#Blog: www.embbnux.com
-#LISENSE:GPL
+author: Embbnux Ji
+Blog: www.embbnux.com
+LISENSE:GPL
+
 User Guide:
  Raspberry Cloud Manager
  user web to control raspberry pi
